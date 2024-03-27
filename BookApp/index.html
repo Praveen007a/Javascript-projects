@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Book Blogs</h1>
+    </div>
+    
+    <div class="container">
+        <div class="book-container">
+            <h2>How To Success In Life</h2>
+            <h4>Praveen D</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ullam delectus quibusdam. Dignissimos ad, nobis facere harum sequi autem ratione laborum animi tempore minima atque! Dignissimos hic dolore officiis suscipit?</p>
+            <button onclick="deletebutton(event)">Delete</button>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="popup">
+        <h2>Add Book</h2>
+        <form>
+            <input type="text" placeholder="Book Name" id="bookName"/>
+            <input type="text" placeholder="Author Name" id="authorName"/>
+            <textarea placeholder="short Description" id="text"></textarea>
+            <button id="addBook">Add Book</button>
+            <button id="cancel">Cancel</button>
+        </form>
+    </div>
+    <button class="add-btn" id="addPopup">+</button>
+    <script src="script.js"></script>
+</body>
+</html>
