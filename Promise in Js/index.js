@@ -11,8 +11,9 @@ const BookTicket=()=>{
     });
 }
 
-BookTicket().then(()=>console.log("Ticket was Booked"))
-.catch(()=>console.log("Sorry your Ticket not conformed."))
+//BookTicket().then(()=>console.log("Ticket was Booked"))
+//.catch(()=>console.log("Sorry your Ticket not conformed."))
+
 
 //coin example
 
@@ -28,8 +29,8 @@ const Toss=()=>{
             reject();
     })
 }
-Toss().then(()=>console.log("Head, you Won!!!"))
-.catch(()=>console.log('Tail, Sorry you Lose!'))
+//Toss().then(()=>console.log("Head, you Won!!!"))
+//.catch(()=>console.log('Tail, Sorry you Lose!'))
 
 //static methods in Promise
 
@@ -55,12 +56,38 @@ let Madhu=new Promise((res,rej)=>{
         rej("Not Reached")
 });
 let Aruna=new Promise((res,rej)=>{
-    let reach=fasle;
+    let reach=false;
     if(reach)
         setTimeout(res,1000,"Aruna Reached");
     else
         rej("Not Reached")
 });
 
-Promise.race([Ramya,Madhu,Aruna]).then((mes)=>console.log(mes))
-.catch((mes)=>console.log(mes));
+//Promise.race([Ramya,Madhu,Aruna]).then((mes)=>console.log(mes))
+//.catch((mes)=>console.log(mes));
+
+console.log("------------------------------------------------------------------------------------")
+
+//Async and Await
+
+/* 
+    Async--Always returns a promise
+    Await--Wait until the promise fullfiled
+*/
+
+let Kaviya = new Promise((res,rej)=>{
+    let reach=true;
+    if(reach)
+        setTimeout(res,3000,"kaviya Reached");
+    else
+        rej("Kaviya not reached");
+});
+
+async function checkStatus(){
+    console.log("hi...");
+    let check=await Kaviya;
+    console.log(check);
+    console.log("bye...")
+}
+
+checkStatus();
